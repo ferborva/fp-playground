@@ -1,0 +1,35 @@
+{
+  "name": "fp-playground",
+  "version": "0.0.0",
+  "description": "Ramda - FantasyLand Types | FP Playground | Node & Browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferborva/fp-playground.git"
+  },
+  "keywords": [
+    "ramda",
+    "fantasyland",
+    "fp",
+    "node",
+    "browser"
+  ],
+  "author": "DP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferborva/fp-playground/issues"
+  },
+  "homepage": "https://github.com/ferborva/fp-playground#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ramda": "^0.23.0",
+    "ramda-fantasy": "^0.7.0"
+  },
+  "devDependencies": {
+    "deep-freeze": "0.0.1",
+    "expect": "^1.20.2"
+  }
+}
