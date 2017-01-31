@@ -1,0 +1,54 @@
+/*
+* Override the Pure CSS Font Stack
+* 
+* When setting the primary font stack, apply it to the Pure grid units along
+* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+* specific font stacks to ensure the greatest OS/browser compatibility.
+*/
+
+/*html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: Georgia, Times, "Times New Roman", serif;
+}*/
+
+
+/* 
+* Generic classes
+*/
+
+/* Texts */
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+
+/* Paddings */
+
+.sm-pad {
+  padding: 5px;
+}
+
+.md-pad {
+  padding: 10px;
+}
+
+.lg-pad {
+  padding: 15px;
+}
+
+.xl-pad {
+  padding: 20px;
+}
+
+/* Boxes */
+
+.border-b {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
