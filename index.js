@@ -1,11 +1,13 @@
 const express = require('express');
 const parseArgs = require('minimist');
 const path = require('path');
+const morgan =require('morgan');
 
 /**
  * Import APIS
  */
 const usersRouter = require('./apis/users/router');
+const spotifyRouter = require('./apis/spotify/router');
 
 /**
  * Parse process arguments on app load
@@ -22,6 +24,10 @@ const argv = parseArgs(process.argv.slice(2), argvParserOpts);
  */
 const app = express();
 
+/**
+ * Setup basic middleware
+ */
+app.use(morgan('tiny'));
 
 /**
  * Define statics url served
@@ -33,6 +39,7 @@ app.use('/web', express.static(path.join(__dirname, 'public')));
  * Setup Subrouters
  */
 app.use('/api/users', usersRouter);
+app.use('/api/spotify', spotifyRouter);
 
 
 /**

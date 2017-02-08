@@ -4,7 +4,8 @@
   "description": "Ramda - FantasyLand Types | FP Playground | Node & Browser",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node index.js --port 8081"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,10 @@
   "dependencies": {
     "express": "4.14.0",
     "minimist": "^1.2.0",
+    "morgan": "^1.8.0",
     "ramda": "0.23.0",
-    "ramda-fantasy": "0.7.0"
+    "ramda-fantasy": "0.7.0",
+    "superagent": "^3.4.1"
   },
   "devDependencies": {
     "deep-freeze": "0.0.1",
