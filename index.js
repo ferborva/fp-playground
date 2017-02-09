@@ -1,7 +1,10 @@
 const express = require('express');
 const parseArgs = require('minimist');
 const path = require('path');
-const morgan =require('morgan');
+const morgan = require('morgan');
+const config = require('./config');
+
+console.log(config.twitterConfig);
 
 /**
  * Import APIS
