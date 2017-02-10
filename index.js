@@ -2,15 +2,13 @@ const express = require('express');
 const parseArgs = require('minimist');
 const path = require('path');
 const morgan = require('morgan');
-const config = require('./config');
-
-console.log(config.twitterConfig);
 
 /**
  * Import APIS
  */
 const usersRouter = require('./apis/users/router');
 const spotifyRouter = require('./apis/spotify/router');
+const twitterRouter = require('./apis/twitter/router');
 
 /**
  * Parse process arguments on app load
@@ -43,6 +41,7 @@ app.use('/web', express.static(path.join(__dirname, 'public')));
  */
 app.use('/api/users', usersRouter);
 app.use('/api/spotify', spotifyRouter);
+app.use('/api/twitter', twitterRouter);
 
 
 /**
