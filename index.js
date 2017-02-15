@@ -9,6 +9,7 @@ const morgan = require('morgan');
 const usersRouter = require('./apis/users/router');
 const spotifyRouter = require('./apis/spotify/router');
 const twitterRouter = require('./apis/twitter/router');
+const chuckRouter = require('./apis/chuck/router');
 
 /**
  * Parse process arguments on app load
@@ -42,6 +43,7 @@ app.use('/web', express.static(path.join(__dirname, 'public')));
 app.use('/api/users', usersRouter);
 app.use('/api/spotify', spotifyRouter);
 app.use('/api/twitter', twitterRouter);
+app.use('/api/chuck', chuckRouter);
 
 
 /**
