@@ -48,7 +48,7 @@ const getRandomnGif = getFromUrl('https://api.giphy.com/v1/gifs/random?api_key=d
 /**
  * Combine Joke and Gif
  */
-const combineJokeGif = Future.of(jokeData => gifData => ({ jokeData, gifData }));
+const combineJokeGif = Future.of(joke => gif => ({ joke, gif }));
 
 // Logger middleware
 router.use((req, res, next) => {
