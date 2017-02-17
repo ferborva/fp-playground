@@ -49,10 +49,11 @@ router.get('/search/artists/:name', (req, res) => {
   const fieldsFilter = req.query.fields ? req.query.fields.split(',') : defaultFields;
 
   artists.getArtists(name)
-    .map(R.prop('artists'))
-    .map(R.prop('items'))
+    // .map(data => data.length)
+    // .map(R.prop('artists'))
+    // .map(R.prop('items'))
     .map(R.map(R.pick(fieldsFilter)))
-    .fork(err => res.end(err), data => res.json(data));
+    .fork(err => res.json(err), data => res.json(data));
 });
 
 exports = module.exports = router;
