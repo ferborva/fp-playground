@@ -5,6 +5,8 @@ const R = require('ramda');
 
 const router = express.Router();
 
+let counter = 0;
+
 /**
  * Helper functions
  */
@@ -71,6 +73,8 @@ router.route('/random')
             myLogger('Error on one of the HTTP API Calls');
             return res.json(e);
           }, (r) => {
+            counter++;
+            console.log(counter);
             myLogger('SUCCESS ON RANDOM DATA REQUEST!');
             return res.json(r);
           });
