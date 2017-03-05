@@ -25,8 +25,8 @@ const isGreaterThan40 = x => x > 40;
 // Is Number + Msg
 const myIsNumber = curriedChecker(R.is(Number), 'Value must be a number');
 
-// Is greater that 42 + Msg
-const myGreaterThan42 = curriedChecker(isGreaterThan40, 'Value must be greater than 42');
+// Is greater that 40 + Msg
+const myGreaterThan40 = curriedChecker(isGreaterThan40, 'Value must be greater than 40');
 
 
 /*
@@ -40,7 +40,7 @@ const myGreaterThan42 = curriedChecker(isGreaterThan40, 'Value must be greater t
 const myNumberValidator = (x) => {
   const checkedTuple = Identity.of(Tuple(x, []))
         .map(myIsNumber)
-        .map(myGreaterThan42)
+        .map(myGreaterThan40)
         .chain(R.identity);
   if (Tuple.snd(checkedTuple).length) {
     // There are errors
